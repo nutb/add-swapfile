@@ -25,11 +25,11 @@ fi
 #========================================
 # Determine OS
 
-OS_TYPE=$(uname -a | awk '{print $2}')
+#OS_TYPE=$(uname -a | awk '{print $2}')
 
-if [ "$OS_TYPE" = "ubuntu" ]
+if [ -f "/usr/bin/apt-get" ]
 then 
-	echo "UBUNTU"
+	echo -e "\e[1;42mThis system is Ubuntu\e[0m"
 	fallocate -l "$SW_SIZE" "$SW_FILE"
 	chmod 600 "$SW_FILE"
 	chown root:root "$SW_FILE"
@@ -49,9 +49,9 @@ then
 		echo "vm.swappiness = 5" >> /etc/sysctl.conf
 	fi
 
-elif [ "$OS_TYPE" = "centos" ]
+elif [ -f  "/etc/redhat-release" ]
 then
-	echo "CENTOS"
+	echo -e "\e[1;42mThis system is CentOS\e[0m"
 	fallocate -l "$SW_SIZE" "$SW_FILE"
 	chmod 600 "$SW_FILE"
 	chown root:root "$SW_FILE"
