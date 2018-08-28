@@ -15,3 +15,4 @@ echo '--------------------------------------------'
 echo 'Check whether the swap space removed or not?'
 echo '--------------------------------------------'
 swapon --show
+free -h
