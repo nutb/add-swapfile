@@ -27,7 +27,7 @@ fi
 
 #OS_TYPE=$(uname -a | awk '{print $2}')
 
-if [ -d "/usr/bin/apt-get" ]
+if [ -f "/usr/bin/apt-get" ]
 then 
 	echo "UBUNTU"
 	fallocate -l "$SW_SIZE" "$SW_FILE"
