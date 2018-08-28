@@ -11,13 +11,15 @@ Currently, this is only tested on ubuntu 14.04 and centos 6.7. It should theoret
 
 Usage
 ------------
-oneinstack_memory:
+oneinstack_memory
 ```shell
 wget https://raw.githubusercontent.com/nutb/add-swapfile/master/memory.sh && chmod +x memory.sh && ./memory.sh
+```
+msergiy87/add-swapfile
 ```shell
 wget https://raw.githubusercontent.com/nutb/add-swapfile/master/swap_add.sh && chmod +x swap_add.sh && ./swap_add.sh /swapfile 1G
 ```
-Remove:
+Remove
 ```shell
 wget https://raw.githubusercontent.com/nutb/add-swapfile/master/swap_remove.sh && chmod +x swap_remove.sh && ./swap_remove.sh
 ```
