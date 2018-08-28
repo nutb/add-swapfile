@@ -53,3 +53,5 @@ if [ "$Swap" == '0' ]; then
     Make-swapfile
   fi
 fi
+swapon --show
+free -h
