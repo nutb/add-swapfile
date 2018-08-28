@@ -11,7 +11,7 @@ Currently, this is only tested on ubuntu 14.04 and centos 6.7. It should theoret
 
 Usage
 ------------
-oneinstack_memory
+oneinstack_memory（推荐）
 ```shell
 wget https://raw.githubusercontent.com/nutb/add-swapfile/master/memory.sh && chmod +x memory.sh && ./memory.sh
 ```
