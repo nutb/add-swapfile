@@ -29,7 +29,7 @@ fi
 
 if [ -f "/usr/bin/apt-get" ]
 then 
-	echo "UBUNTU"
+	echo -e "\e[1;42mThis system is Ubuntu\e[0m"
 	fallocate -l "$SW_SIZE" "$SW_FILE"
 	chmod 600 "$SW_FILE"
 	chown root:root "$SW_FILE"
@@ -48,10 +48,10 @@ then
 		sysctl vm.swappiness=5
 		echo "vm.swappiness = 5" >> /etc/sysctl.conf
 	fi
-
+	swapon --show
 elif [ -f  "/etc/redhat-release" ]
 then
-	echo "CENTOS"
+	echo -e "\e[1;42mThis system is CentOS\e[0m"
 	fallocate -l "$SW_SIZE" "$SW_FILE"
 	chmod 600 "$SW_FILE"
 	chown root:root "$SW_FILE"
@@ -70,6 +70,7 @@ then
 		sysctl vm.swappiness=5
 		echo "vm.swappiness = 5" >> /etc/sysctl.conf
 	fi
+	swapon --show
 else
 	echo "ERROR. Unsupport system"
 	exit 0
