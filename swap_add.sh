@@ -49,6 +49,7 @@ then
 		echo "vm.swappiness = 5" >> /etc/sysctl.conf
 	fi
 	swapon --show
+	free -h
 elif [ -f  "/etc/redhat-release" ]
 then
 	echo -e "\e[1;42mThis system is CentOS\e[0m"
@@ -71,6 +72,7 @@ then
 		echo "vm.swappiness = 5" >> /etc/sysctl.conf
 	fi
 	swapon --show
+	free -h
 else
 	echo "ERROR. Unsupport system"
 	exit 0
